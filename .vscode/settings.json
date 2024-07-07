@@ -1,0 +1,4 @@
+{
+    "dotnetAcquisitionExtension.proxyUrl": "http://proxy-web.micron.com:80",
+    "dotnet.defaultSolution": "DatingApp.sln"
+}
