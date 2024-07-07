@@ -1,0 +1,18 @@
+.img-thumbnail{
+    height: 85%;
+    width: 85%;
+    margin: 25px;
+    padding: 0px 20px;
+}
+textarea,input{
+    border-radius: 5px;
+}
+.alert{
+    border-radius: 5px;
+}
+.btn{
+    border-radius: 5px;
+}
+.card{
+    border-radius: 3px;
+}

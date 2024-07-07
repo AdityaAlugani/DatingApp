@@ -1,0 +1,19 @@
+<div>
+    <h1 class="text-primary">Internal Server Error!</h1>
+    <div *ngIf="error">
+        <h1>{{error.message}}</h1>
+        <p>If you are seeing this error then it is probably not the fault of angular!</p>
+
+        <h4>Next steps</h4>
+        <ul>
+            <li>Check the netwok in chrome!</li>
+            <li>Identify the end point</li>
+            <li>Reproduce the error and try to figure it out</li>
+        </ul>
+
+        <p style="font-weight: bold;">Below is the stack trace</p>
+        <div style="background-color: white;padding: 20px;">
+            <code class="mt-5 text-danger" >{{error.stackTrace}}</code>
+        </div>
+    </div>
+</div>

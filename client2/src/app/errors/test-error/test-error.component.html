@@ -1,0 +1,17 @@
+
+<div>
+    <button class="btn btn-primary" (click)="Notfound()">404</button>
+    <button class="btn btn-primary" (click)="Badrequest()">400</button>
+    <button class="btn btn-primary" (click)="Unauthorized()">401</button>
+    <button class="btn btn-primary" (click)="InternalError()">500</button>
+    <button class="btn btn-primary" (click)="Validation()">400 validation</button>
+
+    <div class="mt-10" *ngIf="Mismatched.length>0">
+        the following feilds are missing or mismatched!
+        <ol class="text-danger">
+            <li *ngFor="let error of Mismatched">
+                {{error}}
+            </li>
+        </ol>
+    </div>
+</div>

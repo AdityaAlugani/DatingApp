@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="/" routerLinkActive="active">Carousel</a>
+        <ul class="navbar-nav me-auto mb-2 mb-md-0" *ngIf="LoggedIn">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/members" routerLinkActive="active">Members</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/lists" routerLinkActive="active">Lists</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/messages" routerLinkActive="active">Messages</a>
+          </li>
+        </ul>
+
+        <div class="nav" style="gap: 1rem;color: white;" *ngIf="LoggedIn">
+            <span class="nav-item option" routerLink="/member/edit">{{justUser.userName | titlecase}}</span>
+            <span class="nav-item option" (click)="logout()">Logout</span>
+        </div>
+
+        <form class="d-flex" style="gap: 5px;" (ngSubmit)="SubmitForm(loginForm)" #loginForm="ngForm"  *ngIf="!LoggedIn">
+          <input class="form-control" name="username" [(ngModel)]="model.username" style="margin-right: 5px;" type="text" placeholder="Username" autocomplete="off">
+          <input class="form-control" name="password" [(ngModel)]="model.password" type="password" placeholder="Password">
+          <button class="btn btn-outline-success" type="submit">Login</button>
+        </form>
+      </div>
+  </nav>
